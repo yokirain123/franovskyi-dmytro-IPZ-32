@@ -84,6 +84,10 @@ ul {
   text-decoration: none;
 }
 
+.header-button {
+  background: #2F303A;
+}
+
 #title-solutions {
   color: white;
   font-size: 44px;
@@ -209,6 +213,9 @@ ul {
   text-decoration: none;
 }
 
+.footer {
+  background: #2F303A;
+}
 .footer > address {
   color: white;
   font-size: 14px;
@@ -217,7 +224,7 @@ ul {
   font-style: normal;
   line-height: 16px;
   letter-spacing: 0.42px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 
 
