@@ -37,7 +37,8 @@ ul {
   word-wrap: break-word;
   text-decoration: none;
 }
-#email-header:hover, #email-header:focus {
+#email-header:hover,
+#email-header:focus {
   color: #2196f3;
   font-size: 14px;
   font-family: Roboto;
@@ -55,7 +56,8 @@ ul {
   word-wrap: break-word;
   text-decoration: none;
 }
-#phone-header:hover, #phone-header:focus {
+#phone-header:hover,
+#phone-header:focus {
   color: #2196f3;
   font-size: 14px;
   font-family: Roboto;
@@ -85,7 +87,7 @@ ul {
 }
 
 .header-button {
-  background: #2F303A;
+  background: #2f303a;
 }
 
 #title-solutions {
@@ -96,10 +98,10 @@ ul {
   text-transform: uppercase;
   line-height: 60px;
   letter-spacing: 2.64px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 #button-blue {
-  background-color: #2196F3;
+  background-color: #2196f3;
   border-radius: 4px;
   border-style: none;
   color: white;
@@ -108,7 +110,7 @@ ul {
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 0.96px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 
 .desc-title {
@@ -118,7 +120,7 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.42px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 .desc-text {
   color: #757575;
@@ -127,7 +129,7 @@ ul {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.42px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 
 .title-text {
@@ -136,7 +138,7 @@ ul {
   font-family: Roboto;
   font-weight: 700;
   letter-spacing: 1.08px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 
 .worker-name {
@@ -145,7 +147,7 @@ ul {
   font-family: Roboto;
   font-weight: 500;
   letter-spacing: 0.48px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 .worker-job {
   color: #757575;
@@ -153,7 +155,7 @@ ul {
   font-family: Roboto;
   font-weight: 400;
   letter-spacing: 0.48px;
-  word-wrap: break-word
+  word-wrap: break-word;
 }
 
 .button-portfolio button {
@@ -185,10 +187,9 @@ ul {
   background: #ffffff;
   border: 1px;
   border-style: solid;
-  border-color: #EEEEEE;
+  border-color: #eeeeee;
   width: 370px;
   height: 404px;
-  
 }
 
 .gallery-title {
@@ -214,7 +215,7 @@ ul {
 }
 
 .footer {
-  background: #2F303A;
+  background: #2f303a;
 }
 .footer > address {
   color: white;
@@ -226,5 +227,3 @@ ul {
   letter-spacing: 0.42px;
   word-wrap: break-word;
 }
-
-
