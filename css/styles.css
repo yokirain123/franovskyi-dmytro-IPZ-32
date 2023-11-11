@@ -141,13 +141,15 @@ li {
 }
 
 .mid-header-container {
-  display:grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
 .mid-title {
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -316,7 +318,6 @@ button:focus {
 }
 
 .project-list li {
-  flex-direction: column;
   border: 1px solid #eee;
 }
 
@@ -360,6 +361,15 @@ button:focus {
   padding-bottom: 60px;
 }
 
+.footer-logo {
+  font-family: "Raleway", sans-serif;
+  color: var(--accent-color);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.78px;
+  text-decoration: none;
+}
+
 .contact-address {
   margin-top: 28px;
 }
@@ -368,7 +378,8 @@ button:focus {
   all: initial;
   font-family: inherit;
   list-style-type: none;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
 }
 
