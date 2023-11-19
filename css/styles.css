@@ -96,6 +96,8 @@ h1, h2, h3, p, ul, a {
   margin-left: auto;
   display: flex;
   gap: 40px;
+  align-items: center;
+  
 }
 
 .contact {
@@ -126,7 +128,6 @@ h1, h2, h3, p, ul, a {
 .link:hover,
 .link:focus,
 .active-link {
-  transition: 300ms;
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -278,8 +279,7 @@ h1, h2, h3, p, ul, a {
   padding-bottom: 30px;
 }
 
-.worker-name,
-.worker-job {
+.worker-name {
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 1.17;
@@ -289,6 +289,17 @@ h1, h2, h3, p, ul, a {
   justify-content: center;
   color: var(--primary-color);
 }
+
+.worker-job {
+  font-size: 16px;
+  line-height: 1.17;
+  font-weight: 500;
+  letter-spacing: 0.48px;
+  display: flex;
+  justify-content: center;
+  color: var(--secondary-color);
+}
+  
 
 .worker-job {
   font-weight: 400;
@@ -319,7 +330,6 @@ h1, h2, h3, p, ul, a {
 
 .team-social:focus,
 .team-social:hover {
-  transition: 300ms;
   background-color: var(--accent-color);
   fill: var(--background-primary-color);
 }
@@ -341,14 +351,13 @@ h1, h2, h3, p, ul, a {
 
 .client_link:focus,
 .client_link:hover {
-  transition: 300ms;
   border-color: var(--accent-color);
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 
 .client_icon{
-  transition:300ms;
+  transition: 50ms;
   width: 106px;
   height: 60px;
 }
@@ -421,25 +430,24 @@ h1, h2, h3, p, ul, a {
 
 .project {
   transition: 300ms;
-  border: 1px solid #eee;
 }
 
 .project img {
-  margin-bottom: 30px;
   display: block;
 }
 
 .project-details {
   padding: 0px 24px 20px 24px;
+  align-items: center;
 }
 
 .project-box:hover {
-  transition: 300ms;
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
     0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
 .gallery-title {
+  margin-top: 20px;
   color: var(--primary-color);
   font-size: 18px;
   font-weight: 700;
@@ -539,7 +547,6 @@ h1, h2, h3, p, ul, a {
 
 .social-foot-link:focus,
 .social-foot-link:hover {
-  transition: 300ms;
   background-color: var(--accent-color);
 }
 
@@ -549,9 +556,11 @@ h1, h2, h3, p, ul, a {
 }
 
 .foot {
-  margin-bottom: 12px;
   display: block;
   color: var(--transperent-color);
   font-size: 14px;
 }
 
+.email {
+  margin-bottom: 12px;
+}
