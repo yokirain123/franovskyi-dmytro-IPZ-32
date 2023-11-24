@@ -25,22 +25,22 @@
         </a>
         <nav>
           <ul class="navigation-links">
-            <li><a class="link active-link" href="index.html">Студія</a></li>
+            <li><a class="active-link" href="index.html">Студія</a></li>
             <li><a class="link" href="portfolio.html">Портфоліо</a></li>
             <li><a class="link" href="">Контакти</a></li>
           </ul>
         </nav>
 
         <ul class="contact-info">
-          <li>
+          <li class="icon-contact">
             <a class="contact head" href="mailto:info@devstudio.com" 
               ><svg class="head_icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-mail5"></svg>info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="icon-contact">
             <a class="contact head" href="tel:+380961111111">
-              <svg class="head_icon" width="10" height="12">
+              <svg class="head_icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-phone2">
               </svg>+38 096 111 11 11</a>
           </li>
@@ -52,7 +52,7 @@
       <section class="mid-header">
         <div class="mid-header-container container">
           <h1 class="mid-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="mid-button" type="button">Замовити послугу</button>
+          <button class="mid-button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -121,6 +121,7 @@
                 width="370"
                 height="294"
               />
+              <p class="picture-title">десктопні додатки</p>
             </li>
             <li>
               <img
@@ -129,6 +130,7 @@
                 width="370"
                 height="294"
               />
+              <p class="picture-title">мобільні додатки</p>
             </li>
             <li>
               <img
@@ -137,6 +139,7 @@
                 width="370"
                 height="294"
               />
+              <p class="picture-title">дизайнерські рішення</p>
             </li>
           </ul>
         </div>
@@ -375,7 +378,7 @@
         <address class="contact-address">
           <div class="contact-info-content">
               <p class="studio-address">м. Київ, пр-т Лесі Українки, 26</p>
-              <a class="contact foot" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <a class="contact email foot" href="mailto:info@devstudio.com">info@devstudio.com</a>
               <a class="contact foot" href="tel:+380961111111">+38 096 111 11 11</a>
           </div>
         </address>
@@ -415,5 +418,18 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-window">
+        <button class="close-window" type="button" data-modal-close>
+          <svg class="icon-close-window" width="30px" height="30px">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  
+    <script src="./js/modal.js"></script>
+
   </body>
 </html>
