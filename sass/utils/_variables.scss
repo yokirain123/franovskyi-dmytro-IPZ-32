@@ -1,13 +1,17 @@
-:root {
-    --primary-color: #212121;
-    --secondary-color: #757575;
-    --background-primary-color: #ffffff;
-    --background-secondary-color: #2f303a;
-    --accent-color: #2196f3;
-    --transperent-color: #ffffff99;
-    --inactive-filter-color: #f5f4fa;
-    --black-logo: #000000;
-    --white-logo: #ffffff;
-    --social-link-color: #afb1b8;
-    --button-hover-color: #188ce8;
+$colors: (
+    'primary-color': #212121,
+    'secondary-color': #757575,
+    'background-primary-color': #ffffff,
+    'background-secondary-color': #2f303a,
+    'accent-color': #2196f3,
+    'transperent-color': #ffffff99,
+    'inactive-filter-color': #f5f4fa,
+    'black-logo': #000000,
+    'white-logo': #ffffff,
+    'social-link-color': #afb1b8,
+    'button-hover-color': #188ce8,
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key)
 }

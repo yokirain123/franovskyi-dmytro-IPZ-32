@@ -2,6 +2,7 @@
 <html lang="uk">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--#region fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,9 +32,9 @@
           </ul>
         </nav>
 
-        <ul class="contact__list contact">
+        <ul class="header__list contact">
           <li class="contact__item">
-            <a class="contact__link contact__link--header" href="mailto:info@devstudio.com">
+            <a class="contact__link contact__link--header--email" href="mailto:info@devstudio.com">
             <svg class="contact__icon" width="16" height="12">
             <use href="./images/icons.svg#icon-mail5"></use>
             </svg>info@devstudio.com</a></li>
@@ -43,7 +44,55 @@
             <use href="./images/icons.svg#icon-phone2"></use>
             </svg>+38 096 111 11 11</a></li>
         </ul>
-
+        <button class="mobile_button" type="button" data-menu-button aria-expanded="false">
+          <svg class="mobile_button-icon">
+            <use class="mobile_button--close" href="./images/icons.svg#icon-burger-close"></use>
+            <use class="mobile_button--open" href="./images/icons.svg#icon-burger-open"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile" data-menu>
+        <nav class="mobile__nav">
+          <ul class="mobile__nav-list">
+            <li class="mobile__nav-item">
+              <a href="./index.html" class="mobile__nav-link active">Студія</a>
+            </li>
+            <li class="mobile__nav-item">
+              <a href="./portfolio.html" class="mobile__nav-link">Портфоліо</a>
+            </li>
+            <li class="mobile__nav-item">
+              <a href="" class="mobile__nav-link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="mobile__contacts-list">
+          <li class="mobile__contacts-item">
+            <a
+              class="mobile__contacts-link link mobile__contacts-link--blue"
+              href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile__contacts-item">
+            <a class="mobile__contacts-link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile__social-list">
+          <li class="mobile__social-item">
+            <a class="mobile__social-link" href="">Instagram</a>
+          </li>
+          <li class="mobile__social-item">
+            <a class="mobile__social-link" href="">Twitter</a>
+          </li>
+          <li class="mobile__social-item">
+            <a class="mobile__social-link" href="">Facebook</a>
+          </li>
+          <li class="mobile__social-item">
+            <a class="mobile__social-link" href="">LinkedIn</a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -149,39 +198,53 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img class="team__image"
-                src="images/igor.jpg"
+              <picture>
+                <source srcset="
+              ./images/team/igor-270.jpg 1x,
+              ./images/team/igor-270@2.jpg 2x
+              " media="(min-width: 1200px)" sizes="270px" width="270" height="260" type="image/jpg" />
+              <source srcset="
+                ./images/team/igor-354.jpg 1x,
+                ./images/team/igor-354@2.jpg 2x
+                " media="(min-width: 768px)" sizes="354px" width="354" height="374" type="image/jpg" />
+              <source srcset="
+                ./images/team/igor-450.jpg 1x,
+                ./images/team/igor-450@2.jpg 2x
+                " media="(max-width: 767px)" sizes="450px" width="450" height="460" type="image/jpg" />
+              <img srcset="./images/team/igor-270.jpg 1x, ./images/team/igor-270@2.jpg 2x" 
+              src="images/team/igor-270.jpg"
                 alt="Хлопець в окулярах з бородою, посміхається"
                 width="270"
                 height="260"
               />
-              <div class="team__card">
+              </picture>
+              <div class="team__info">
                 <h3 class="team__member">Ігор Дем'яненко</h3>
                 <p class="team__job">Product Designer</p>
-                <ul class="team__social-list">
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://instagram.com" target="_blank">
+                <ul class="social__list social">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://instagram.com" target="_blank">
                     <svg class="social__icon">
                     <use href="./images/icons.svg#icon-instagram">
                     </svg>
                     </a>
                   </li>
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://twitter.com" target="_blank">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://twitter.com" target="_blank">
                       <svg class="social__icon">
                     <use href="./images/icons.svg#icon-twitter">
                     </svg>
                     </a>
                   </li>
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://facebook.com" target="_blank">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://facebook.com" target="_blank">
                       <svg class="social__icon">
                     <use href="./images/icons.svg#icon-facebook">
                     </svg>
                     </a>
                   </li>
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://linkedin.com" target="_blank">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://linkedin.com" target="_blank">
                     <svg class="social__icon">
                     <use href="./images/icons.svg#icon-linkedin2">
                     </svg>
@@ -191,39 +254,53 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__image"
-                src="images/olga.jpg"
+              <picture>
+                <source srcset="
+              ./images/team/olga-270.jpg 1x,
+              ./images/team/olga-270@2.jpg 2x
+              " media="(min-width: 1200px)" sizes="270px" width="270" height="260" type="image/jpg" />
+              <source srcset="
+                ./images/team/olga-354.jpg 1x,
+                ./images/team/olga-354@2.jpg 2x
+                " media="(min-width: 768px)" sizes="354px" width="354" height="374" type="image/jpg" />
+              <source srcset="
+                ./images/team/olga-450.jpg 1x,
+                ./images/team/olga-450@2.jpg 2x
+                " media="(max-width: 767px)" sizes="450px" width="450" height="460" type="image/jpg" />
+              <img srcset="./images/team/olga-270.jpg 1x, ./images/team/olga-270@2.jpg 2x" 
+              src="images/team/olga-270.jpg"
                 alt="Дівчина в окулярах, посміхається"
                 width="270"
                 height="260"
               />
-              <div class="team__card">
+              </picture>
+              <div class="team__info">
                 <h3 class="team__member">Ольга Рєліна</h3>
                 <p class="team__job">Frontend Developer</p>
-                <ul class="team__social-list">
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://instagram.com" target="_blank">
+                <ul class="social__list social">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://instagram.com" target="_blank">
                     <svg class="social__icon">
                     <use href="./images/icons.svg#icon-instagram">
                     </svg>
                     </a>
                   </li>
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://twitter.com" target="_blank">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://twitter.com" target="_blank">
                       <svg class="social__icon">
                     <use href="./images/icons.svg#icon-twitter">
                     </svg>
                     </a>
                   </li>
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://facebook.com" target="_blank">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://facebook.com" target="_blank">
                       <svg class="social__icon">
                     <use href="./images/icons.svg#icon-facebook">
                     </svg>
                     </a>
                   </li>
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://linkedin.com" target="_blank">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://linkedin.com" target="_blank">
                     <svg class="social__icon">
                     <use href="./images/icons.svg#icon-linkedin2">
                     </svg>
@@ -233,39 +310,53 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__image"
-                src="images/mikola.jpg"
-                alt="Чоловік дивиться в сторону і посміхається"
+              <picture>
+                <source srcset="
+              ./images/team/mikola-270.jpg 1x,
+              ./images/team/mikola-270@2.jpg 2x
+              " media="(min-width: 1200px)" sizes="270px" width="270" height="260" type="image/jpg" />
+              <source srcset="
+                ./images/team/mikola-354.jpg 1x,
+                ./images/team/mikola-354@2.jpg 2x
+                " media="(min-width: 768px)" sizes="354px" width="354" height="374" type="image/jpg" />
+              <source srcset="
+                ./images/team/mikola-450.jpg 1x,
+                ./images/team/mikola-450@2.jpg 2x
+                " media="(max-width: 767px)" sizes="450px" width="450" height="460" type="image/jpg" />
+              <img srcset="./images/team/mikola-270.jpg 1x, ./images/team/mikola-270@2.jpg 2x" 
+              src="images/team/mikola-270.jpg"
+              alt="Чоловік дивиться в сторону і посміхається"
                 width="270"
                 height="260"
               />
-              <div class="team__card">
+              </picture>
+              <div class="team__info">
                 <h3 class="team__member">Микола Тарасов</h3>
                 <p class="team__job">Marketing</p>
-                <ul class="team__social-list">
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://instagram.com" target="_blank">
+                <ul class="social__list social">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://instagram.com" target="_blank">
                     <svg class="social__icon">
                     <use href="./images/icons.svg#icon-instagram">
                     </svg>
                     </a>
                   </li>
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://twitter.com" target="_blank">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://twitter.com" target="_blank">
                       <svg class="social__icon">
                     <use href="./images/icons.svg#icon-twitter">
                     </svg>
                     </a>
                   </li>
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://facebook.com" target="_blank">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://facebook.com" target="_blank">
                       <svg class="social__icon">
                     <use href="./images/icons.svg#icon-facebook">
                     </svg>
                     </a>
                   </li>
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://linkedin.com" target="_blank">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://linkedin.com" target="_blank">
                     <svg class="social__icon">
                     <use href="./images/icons.svg#icon-linkedin2">
                     </svg>
@@ -275,39 +366,53 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__image"
-                src="images/mikhailo.jpg"
-                alt="Хлопець в окулярах, з бородою в чорній футболці"
+              <picture>
+                <source srcset="
+              ./images/team/mikhailo-270.jpg 1x,
+              ./images/team/mikhailo-270@2.jpg 2x
+              " media="(min-width: 1200px)" sizes="270px" width="270" height="260" type="image/jpg" />
+              <source srcset="
+                ./images/team/mikhailo-354.jpg 1x,
+                ./images/team/mikhailo-354@2.jpg 2x
+                " media="(min-width: 768px)" sizes="354px" width="354" height="374" type="image/jpg" />
+              <source srcset="
+                ./images/team/mikhailo-450.jpg 1x,
+                ./images/team/mikhailo-450@2.jpg 2x
+                " media="(max-width: 767px)" sizes="450px" width="450" height="460" type="image/jpg" />
+              <img srcset="./images/team/mikhailo-270.jpg 1x, ./images/team/mikhailo-270@2.jpg 2x" 
+              src="images/team/mikhailo-270.jpg"
+              alt="Хлопець в окулярах, з бородою в чорній футболці"
                 width="270"
                 height="260"
               />
-              <div class="team__card">
+              </picture>
+              <div class="team__info">
                 <h3 class="team__member">Михайло Єрмаков</h3>
                 <p class="team__job">UI Designer</p>
-                <ul class="team__social-list">
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://instagram.com" target="_blank">
+                <ul class="social__list social">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://instagram.com" target="_blank">
                     <svg class="social__icon">
                     <use href="./images/icons.svg#icon-instagram">
                     </svg>
                     </a>
                   </li>
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://twitter.com" target="_blank">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://twitter.com" target="_blank">
                       <svg class="social__icon">
                     <use href="./images/icons.svg#icon-twitter">
                     </svg>
                     </a>
                   </li>
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://facebook.com" target="_blank">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://facebook.com" target="_blank">
                       <svg class="social__icon">
                     <use href="./images/icons.svg#icon-facebook">
                     </svg>
                     </a>
                   </li>
-                  <li class="team__social-item">
-                    <a class="team__social-link social" href="https://linkedin.com" target="_blank">
+                  <li class="social__circle">
+                    <a class="social__link social" href="https://linkedin.com" target="_blank">
                     <svg class="social__icon">
                     <use href="./images/icons.svg#icon-linkedin2">
                     </svg>
@@ -385,40 +490,40 @@
         </address>
       </div>
       <div class="footer__social social">
-        <h2 class="social__title">Приєднутесь</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link" href="https://instagram.com" target="_blank">
-              <svg class="social__icon">
-              <use href="./images/icons.svg#icon-instagram">
-              </svg>
-            </a> 
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://twitter.com" target="_blank">
-              <svg class="social__icon">
-              <use href="./images/icons.svg#icon-twitter">
-              </svg>
-          </a> 
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://facebook.com" target="_blank">
-              <svg class="social__icon">
-              <use href="./images/icons.svg#icon-facebook">
-              </svg>
+        <h2 class="footer__title">Приєднутесь</h2>
+        <ul class="social__list social">
+          <li class="social__circle">
+            <a class="social__link--footer social" href="https://instagram.com" target="_blank">
+            <svg class="social__icon">
+            <use href="./images/icons.svg#icon-instagram">
+            </svg>
             </a>
           </li>
-          <li class="social__item">
-          <a class="social__link" href="https://linkedin.com" target="_blank">
+          <li class="social__circle">
+            <a class="social__link--footer social" href="https://twitter.com" target="_blank">
+              <svg class="social__icon">
+            <use href="./images/icons.svg#icon-twitter">
+            </svg>
+            </a>
+          </li>
+          <li class="social__circle">
+            <a class="social__link--footer social" href="https://facebook.com" target="_blank">
+              <svg class="social__icon">
+            <use href="./images/icons.svg#icon-facebook">
+            </svg>
+            </a>
+          </li>
+          <li class="social__circle">
+            <a class="social__link--footer social" href="https://linkedin.com" target="_blank">
             <svg class="social__icon">
             <use href="./images/icons.svg#icon-linkedin2">
             </svg>
-          </a>
+            </a>
           </li>
         </ul>
         </div>
         <div class="footer__email email">
-        <h2 class="email__title">Підпишіться на розсилку</h2>
+        <h2 class="footer__title">Підпишіться на розсилку</h2>
         <form class="email__form">
           <input class="email__input" required type="email" placeholder="E-mail">
           <button class="email__submit subscribe" type="submit">
@@ -478,6 +583,7 @@
     </div>
   
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-nav.js"></script>
 
   </body>
 </html>

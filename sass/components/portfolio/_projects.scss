@@ -1,14 +1,49 @@
 .projects{
+    padding: 60px 0;
+    @include match(desktop) {
+        padding: 94px 0;
+    }
     &__list{
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
-        gap: 27px;
+        gap: 30px;
+
+        @include match(tablet) {
+            flex-wrap: nowrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        @include match(desktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
     &__item{
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
         border: 1px solid #eee;
+
+        @include match(mobile) {
+            max-width: 450px;
+            max-height: 404px;
+            margin: 0px;
+          }
+
+          @include match(tablet) {
+            flex-basis: calc((100% - 30px) / 2);
+            max-width: 354px;
+            max-height: 440px;
+            margin: 0px;
+          }
+
+          @include match(desktop) {
+            flex-basis: calc((100% - 60px) / 3);
+            max-width: 370px;
+            max-height: 404px;
+            margin: 0px;
+          }
     }
-    &__item:hover{
+    &__item:hover, &__item:focus-within {
         box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
         0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
     }
@@ -38,7 +73,7 @@
             top: 50%;
             padding: 0 24px;
             transform: translate(0, -50%);
-            color: var(--background-primary-color);
+            color: getColor(background-primary-color);
             text-decoration: none;
             font-size: 18px;
             letter-spacing: 0.54px;
@@ -51,15 +86,53 @@
     }
     &__title{
         margin-bottom: 4px;
-        color: var(--primary-color);
+        color: getColor(primary-color);
         font-size: 18px;
         line-height: 2;
         letter-spacing: 1.08px;
     }
     &__description{
-        color: var(--secondary-color);
+        color: getColor(secondary-color);
         font-size: 16px;
         line-height: 1.875;
         letter-spacing: 0.48px;
+    }
+}
+
+.filter{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+
+    @include match(tablet) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 30px;
+
+    }
+    @include match(desktop) {
+        margin-bottom: 50px;
+    }
+
+    &__button{
+        @include button;
+        transition: color 250ms, box-shadow 250ms, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 6px 22px;
+        background-color: getColor(inactive-filter-color);
+        font-weight: 500;
+        line-height: 1.625;
+        letter-spacing: 0.48px;
+    }
+    &__button:hover,
+    &__button:focus{
+        color: getColor(inactive-filter-color);
+        background-color: getColor(accent-color);
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
     }
 }
