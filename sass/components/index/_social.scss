@@ -4,10 +4,19 @@
         justify-content: center;
         gap: 10px;
         margin-top: 16px;
-        flex-wrap: wrap;
         align-items: center;
         flex-basis: content;
         margin-bottom: 0px;
+
+        @include match(mobile) {
+            flex-wrap: wrap;
+        }
+        @include match(tablet) {
+            flex-wrap: wrap;
+        }
+        @include match(desktop) {
+            flex-wrap: nowrap;
+        }
     }
     &__circle {
         border-radius: 50%;

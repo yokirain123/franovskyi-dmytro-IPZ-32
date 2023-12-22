@@ -102,25 +102,23 @@
         &__form{
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 12px;
 
-            @include match(retina) {
-                flex-direction: column;
-            }
-
             @include match(tablet) {
                 flex-direction: column;
-              }
-            
+            }
             @include match(desktop) {
                 flex-direction: row;
+                display: flex;
+                flex-wrap: nowrap;
             }
         }
         &__input{
             border-radius: 4px;
             border: 1px solid rgba(255, 255, 255, 0.30);
-            padding: 15px 16px;
+            padding: 16px 16px;
             min-width: 100%;
             margin: 0 0 20px 0;
             color: getColor(social-link-color);
@@ -136,7 +134,6 @@
             }
             @include match(desktop) {
                 max-width: 358px;
-                min-width: 1px;
                 margin: 0;
             }
 

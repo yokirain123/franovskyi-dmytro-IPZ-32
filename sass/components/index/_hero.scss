@@ -6,12 +6,12 @@
     background-position: center;
 
     @include match(retina) {
-        padding: 200px 0;
+        padding: 118px 0;
         //image path
     }
 
     @include match(tablet) {
-        padding: 200px 0;
+        padding: 118px 0;
         //image path
         @include match(retina) {
             //image path

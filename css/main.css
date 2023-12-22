@@ -401,12 +401,12 @@ img {
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2/1), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    padding: 200px 0;
+    padding: 118px 0;
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    padding: 200px 0;
+    padding: 118px 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -618,10 +618,24 @@ img {
   justify-content: center;
   gap: 10px;
   margin-top: 16px;
-  flex-wrap: wrap;
   align-items: center;
   flex-basis: content;
   margin-bottom: 0px;
+}
+@media screen and (min-width: 480px) {
+  .social__list {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .social__list {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .social__list {
+    flex-wrap: nowrap;
+  }
 }
 .social__circle {
   border-radius: 50%;
@@ -726,10 +740,9 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 480px) {
   .modal {
-    width: 100%;
-    height: 100%;
+    width: 450px;
   }
 }
 .modal__close-button {
@@ -1129,13 +1142,9 @@ img {
 .footer .email__form {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-}
-@media screen and (min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2/1), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .footer .email__form {
-    flex-direction: column;
-  }
 }
 @media screen and (min-width: 768px) {
   .footer .email__form {
@@ -1145,12 +1154,14 @@ img {
 @media screen and (min-width: 1200px) {
   .footer .email__form {
     flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
   }
 }
 .footer .email__input {
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 15px 16px;
+  padding: 16px 16px;
   min-width: 100%;
   margin: 0 0 20px 0;
   color: #afb1b8;
@@ -1171,7 +1182,6 @@ img {
 @media screen and (min-width: 1200px) {
   .footer .email__input {
     max-width: 358px;
-    min-width: 1px;
     margin: 0;
   }
 }
