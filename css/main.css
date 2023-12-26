@@ -237,7 +237,7 @@ img {
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 100;
+  z-index: 5;
   cursor: pointer;
 }
 @media screen and (max-width: 479px) {
@@ -297,7 +297,7 @@ img {
   top: 0;
   left: 0;
   padding: 48px 40px;
-  z-index: 20;
+  z-index: 4;
   transform: translateX(100%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -720,7 +720,7 @@ img {
   height: 100%;
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 8;
 }
 
 .is-hidden {
@@ -743,6 +743,11 @@ img {
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
   }
 }
 .modal__close-button {
@@ -853,6 +858,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.42px;
   cursor: pointer;
+  font-size: 12px;
 }
 .license__checkbox {
   position: absolute;
@@ -1181,7 +1187,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .footer .email__input {
-    max-width: 358px;
+    min-width: 358px;
     margin: 0;
   }
 }

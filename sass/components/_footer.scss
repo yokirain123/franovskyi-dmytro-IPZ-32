@@ -133,7 +133,7 @@
                 min-width: 450px;
             }
             @include match(desktop) {
-                max-width: 358px;
+                min-width: 358px;
                 margin: 0;
             }
 
