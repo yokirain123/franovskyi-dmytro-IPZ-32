@@ -2,6 +2,7 @@
 <html lang="uk">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--#region fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,9 +32,9 @@
           </ul>
         </nav>
 
-        <ul class="contact__list contact">
+        <ul class="header__list contact">
           <li class="contact__item">
-            <a class="contact__link contact__link--header" href="mailto:info@devstudio.com">
+            <a class="contact__link contact__link--header--email" href="mailto:info@devstudio.com">
             <svg class="contact__icon" width="16" height="12">
             <use href="./images/icons.svg#icon-mail5"></use>
             </svg>info@devstudio.com</a></li>
@@ -43,7 +44,56 @@
             <use href="./images/icons.svg#icon-phone2"></use>
             </svg>+38 096 111 11 11</a></li>
         </ul>
-
+        <button class="mobile_button" type="button" data-menu-button aria-expanded="false">
+          <svg class="mobile_button-icon">
+            <use class="mobile_button--close" href="./images/icons.svg#icon-burger-close"></use>
+            <use class="mobile_button--open" href="./images/icons.svg#icon-burger-open"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile" data-menu>
+        <nav class="mobile__nav">
+          <ul class="mobile__nav-list">
+            <li class="mobile__nav-item">
+              <a href="./index.html" class="mobile__nav-link">Студія</a>
+            </li>
+            <li class="mobile__nav-item">
+              <a href="./portfolio.html" class="mobile__nav-link active">Портфоліо</a>
+            </li>
+            <li class="mobile__nav-item">
+              <a href="" class="mobile__nav-link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="mobile__contacts-list">
+          <li class="mobile__contacts-item">
+            <a
+              class="mobile__contacts-link link mobile__contacts-link--blue"
+              href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile__contacts-item">
+            <a class="mobile__contacts-link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile__social-list">
+          <li class="mobile__social-item">
+            <a class="mobile__social-link" href="">Instagram</a>
+          </li>
+          <li class="mobile__social-item">
+            <a class="mobile__social-link" href="">Twitter</a>
+          </li>
+          <li class="mobile__social-item">
+            <a class="mobile__social-link" href="">Facebook</a>
+          </li>
+          <li class="mobile__social-item">
+            <a class="mobile__social-link" href="">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
       </div>
     </header>
 
@@ -52,23 +102,29 @@
         <div class="projects__content container">
           <h1 hidden>Filters</h1>
           <ul class="projects__filters filter">
-            <li class="filter__item"><button class="filter__button filter__button--active" type="button">Усі</button></li>
-            <li class="filter__item"><button class="filter__button" type="button">Веб-сайти</button></li>
-            <li class="filter__item"><button class="filter__button" type="button">Додатки</button></li>
-            <li class="filter__item"><button class="filter__button" type="button">Дизайн</button></li>
-            <li class="filter__item"><button class="filter__button" type="button">Маркетинг</button></li>
+            <li><button class="filter__button" type="button">Усі</button></li>
+            <li><button class="filter__button" type="button">Веб-сайти</button></li>
+            <li><button class="filter__button" type="button">Додатки</button></li>
+            <li><button class="filter__button" type="button">Дизайн</button></li>
+            <li><button class="filter__button" type="button">Маркетинг</button></li>
           </ul>
 
           <ul class="projects__list">
             <li class="projects__item">
               <a href="@" class="projects__link">
                 <div class="project__wrapper wrapper">
-                <img
-                  src="images/portfolio1.jpg"
-                  alt="Ноутбук"
-                  width="370"
-                  height="294"
-                />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio/portfolio1-370.jpg 1x, ./images/portfolio/portfolio1-370@2.jpg 2x"
+                      media="(min-width: 1200px)" sizes="370px" width="370" height="294" type="image/jpg">
+                    <source
+                      srcset="./images/portfolio/portfolio1-354.jpg 1x, ./images/portfolio/portfolio1-354@2.jpg 2x"
+                      media="(min-width: 768px)" sizes="354px" width="354" height="294" type="image/jpg">
+                    <img
+                      srcset="./images/portfolio/portfolio1-450.jpg 1x, ./images/portfolio/portfolio1-450@2.jpg 2x"
+                      src="./images/portfolio/portfolio1-450.jpg"
+                      alt="Ноутбук" width="450" height="294" />
+                  </picture>
                 <div class="wrapper__overlay">
                   <p class="wrapper__text">
                     Ресурс пропонує комплексні пропозиції
@@ -87,12 +143,18 @@
             <li class="projects__item">
               <a href="@" class="projects__link">
                 <div class="project__wrapper wrapper">
-                <img
-                  src="images/portfolio2.jpg"
-                  alt="NBA, баскетбол"
-                  width="370"
-                  height="294"
-                />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio/portfolio2-370.jpg 1x, ./images/portfolio/portfolio2-370@2.jpg 2x"
+                      media="(min-width: 1200px)" sizes="370px" width="370" height="294" type="image/jpg">
+                    <source
+                      srcset="./images/portfolio/portfolio2-354.jpg 1x, ./images/portfolio/portfolio2-354@2.jpg 2x"
+                      media="(min-width: 768px)" sizes="354px" width="354" height="294" type="image/jpg">
+                    <img
+                      srcset="./images/portfolio/portfolio2-450.jpg 1x, ./images/portfolio/portfolio2-450@2.jpg 2x"
+                      src="./images/portfolio/portfolio2-450.jpg"
+                      alt="Баскетбол" width="450" height="294" />
+                  </picture>
                 <div class="wrapper__overlay">
                   <p class="wrapper__text">
                     Ресурс пропонує комплексні пропозиції
@@ -112,12 +174,18 @@
             <li class="projects__item">
               <a href="@" class="projects__link">
                 <div class="project__wrapper wrapper">
-                <img
-                  src="images/portfolio3.jpg"
-                  alt="Лого ресторану"
-                  width="370"
-                  height="294"
-                />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio/portfolio3-370.jpg 1x, ./images/portfolio/portfolio3-370@2.jpg 2x"
+                      media="(min-width: 1200px)" sizes="370px" width="370" height="294" type="image/jpg">
+                    <source
+                      srcset="./images/portfolio/portfolio3-354.jpg 1x, ./images/portfolio/portfolio3-354@2.jpg 2x"
+                      media="(min-width: 768px)" sizes="354px" width="354" height="294" type="image/jpg">
+                    <img
+                      srcset="./images/portfolio/portfolio3-450.jpg 1x, ./images/portfolio/portfolio3-450@2.jpg 2x"
+                      src="./images/portfolio/portfolio3-450.jpg"
+                      alt="Лого ресторану" width="450" height="294" />
+                  </picture>
                 <div class="wrapper__overlay">
                   <p class="wrapper__text">
                     Ресурс пропонує комплексні пропозиції
@@ -136,12 +204,18 @@
             <li class="projects__item">
               <a href="@" class="projects__link">
                 <div class="project__wrapper wrapper">
-                <img
-                  src="images/portfolio4.jpg"
-                  alt="Навушники"
-                  width="370"
-                  height="294"
-                />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio/portfolio4-370.jpg 1x, ./images/portfolio/portfolio4-370@2.jpg 2x"
+                      media="(min-width: 1200px)" sizes="370px" width="370" height="294" type="image/jpg">
+                    <source
+                      srcset="./images/portfolio/portfolio4-354.jpg 1x, ./images/portfolio/portfolio4-354@2.jpg 2x"
+                      media="(min-width: 768px)" sizes="354px" width="354" height="294" type="image/jpg">
+                    <img
+                      srcset="./images/portfolio/portfolio4-450.jpg 1x, ./images/portfolio/portfolio4-450@2.jpg 2x"
+                      src="./images/portfolio/portfolio1-450.jpg"
+                      alt="Навушники" width="450" height="294" />
+                  </picture>
                 <div class="wrapper__overlay">
                   <p class="wrapper__text">
                     Ресурс пропонує комплексні пропозиції
@@ -160,12 +234,18 @@
             <li class="projects__item">
               <a href="@" class="projects__link">
                 <div class="project__wrapper wrapper">
-                <img
-                  src="images/portfolio5.jpg"
-                  alt="Коробки"
-                  width="370"
-                  height="294"
-                />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio/portfolio5-370.jpg 1x, ./images/portfolio/portfolio5-370@2.jpg 2x"
+                      media="(min-width: 1200px)" sizes="370px" width="370" height="294" type="image/jpg">
+                    <source
+                      srcset="./images/portfolio/portfolio5-354.jpg 1x, ./images/portfolio/portfolio5-354@2.jpg 2x"
+                      media="(min-width: 768px)" sizes="354px" width="354" height="294" type="image/jpg">
+                    <img
+                      srcset="./images/portfolio/portfolio5-450.jpg 1x, ./images/portfolio/portfolio5-450@2.jpg 2x"
+                      src="./images/portfolio/portfolio1-450.jpg"
+                      alt="Коробки" width="450" height="294" />
+                  </picture>
                 <div class="wrapper__overlay">
                   <p class="wrapper__text">
                     Ресурс пропонує комплексні пропозиції
@@ -184,12 +264,18 @@
             <li class="projects__item">
               <a href="@" class="projects__link">
                 <div class="project__wrapper wrapper">
-                <img
-                  src="images/portfolio6.jpg"
-                  alt="Монітор"
-                  width="370"
-                  height="294"
-                />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio/portfolio6-370.jpg 1x, ./images/portfolio/portfolio6-370@2.jpg 2x"
+                      media="(min-width: 1200px)" sizes="370px" width="370" height="294" type="image/jpg">
+                    <source
+                      srcset="./images/portfolio/portfolio6-354.jpg 1x, ./images/portfolio/portfolio6-354@2.jpg 2x"
+                      media="(min-width: 768px)" sizes="354px" width="354" height="294" type="image/jpg">
+                    <img
+                      srcset="./images/portfolio/portfolio6-450.jpg 1x, ./images/portfolio/portfolio6-450@2.jpg 2x"
+                      src="./images/portfolio/portfolio6-450.jpg"
+                      alt="Ноутбук" width="450" height="294" />
+                  </picture>
                 <div class="wrapper__overlay">
                   <p class="wrapper__text">
                     Ресурс пропонує комплексні пропозиції
@@ -208,12 +294,18 @@
             <li class="projects__item">
               <a href="@" class="projects__link">
                 <div class="project__wrapper wrapper">
-                <img
-                  src="images/portfolio7.jpg"
-                  alt="Книга"
-                  width="370"
-                  height="294"
-                />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio/portfolio7-370.jpg 1x, ./images/portfolio/portfolio7-370@2.jpg 2x"
+                      media="(min-width: 1200px)" sizes="370px" width="370" height="294" type="image/jpg">
+                    <source
+                      srcset="./images/portfolio/portfolio7-354.jpg 1x, ./images/portfolio/portfolio7-354@2.jpg 2x"
+                      media="(min-width: 768px)" sizes="354px" width="354" height="294" type="image/jpg">
+                    <img
+                      srcset="./images/portfolio/portfolio7-450.jpg 1x, ./images/portfolio/portfolio7-450@2.jpg 2x"
+                      src="./images/portfolio/portfolio7-450.jpg"
+                      alt="Ноутбук" width="450" height="294" />
+                  </picture>
                 <div class="wrapper__overlay">
                   <p class="wrapper__text">
                     Ресурс пропонує комплексні пропозиції
@@ -232,12 +324,18 @@
             <li class="projects__item">
               <a href="@" class="projects__link">
                 <div class="project__wrapper wrapper">
-                <img
-                  src="images/portfolio8.jpg"
-                  alt="Ярлик"
-                  width="370"
-                  height="294"
-                />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio/portfolio8-370.jpg 1x, ./images/portfolio/portfolio8-370@2.jpg 2x"
+                      media="(min-width: 1200px)" sizes="370px" width="370" height="294" type="image/jpg">
+                    <source
+                      srcset="./images/portfolio/portfolio8-354.jpg 1x, ./images/portfolio/portfolio8-354@2.jpg 2x"
+                      media="(min-width: 768px)" sizes="354px" width="354" height="294" type="image/jpg">
+                    <img
+                      srcset="./images/portfolio/portfolio8-450.jpg 1x, ./images/portfolio/portfolio8-450@2.jpg 2x"
+                      src="./images/portfolio/portfolio8-450.jpg"
+                      alt="Ноутбук" width="450" height="294" />
+                  </picture>
                 <div class="wrapper__overlay">
                   <p class="wrapper__text">
                     Ресурс пропонує комплексні пропозиції
@@ -256,12 +354,18 @@
             <li class="projects__item">
               <a href="@" class="projects__link">
                 <div class="project__wrapper wrapper">
-                <img
-                  src="images/portfolio9.jpg"
-                  alt="Розвивають бізнес"
-                  width="370"
-                  height="294"
-                />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio/portfolio9-370.jpg 1x, ./images/portfolio/portfolio9-370@2.jpg 2x"
+                      media="(min-width: 1200px)" sizes="370px" width="370" height="294" type="image/jpg">
+                    <source
+                      srcset="./images/portfolio/portfolio9-354.jpg 1x, ./images/portfolio/portfolio9-354@2.jpg 2x"
+                      media="(min-width: 768px)" sizes="354px" width="354" height="294" type="image/jpg">
+                    <img
+                      srcset="./images/portfolio/portfolio9-450.jpg 1x, ./images/portfolio/portfolio9-450@2.jpg 2x"
+                      src="./images/portfolio/portfolio9-450.jpg"
+                      alt="Ноутбук" width="450" height="294" />
+                  </picture>
                 <div class="wrapper__overlay">
                   <p class="wrapper__text">
                     Ресурс пропонує комплексні пропозиції
@@ -295,40 +399,40 @@
         </address>
       </div>
       <div class="footer__social social">
-        <h2 class="social__title">Приєднутесь</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link" href="https://instagram.com" target="_blank">
-              <svg class="social__icon">
-              <use href="./images/icons.svg#icon-instagram">
-              </svg>
-            </a> 
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://twitter.com" target="_blank">
-              <svg class="social__icon">
-              <use href="./images/icons.svg#icon-twitter">
-              </svg>
-          </a> 
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://facebook.com" target="_blank">
-              <svg class="social__icon">
-              <use href="./images/icons.svg#icon-facebook">
-              </svg>
+        <h2 class="footer__title">Приєднутесь</h2>
+        <ul class="social__list social">
+          <li class="social__circle">
+            <a class="social__link--footer social" href="https://instagram.com" target="_blank">
+            <svg class="social__icon">
+            <use href="./images/icons.svg#icon-instagram">
+            </svg>
             </a>
           </li>
-          <li class="social__item">
-          <a class="social__link" href="https://linkedin.com" target="_blank">
+          <li class="social__circle">
+            <a class="social__link--footer social" href="https://twitter.com" target="_blank">
+              <svg class="social__icon">
+            <use href="./images/icons.svg#icon-twitter">
+            </svg>
+            </a>
+          </li>
+          <li class="social__circle">
+            <a class="social__link--footer social" href="https://facebook.com" target="_blank">
+              <svg class="social__icon">
+            <use href="./images/icons.svg#icon-facebook">
+            </svg>
+            </a>
+          </li>
+          <li class="social__circle">
+            <a class="social__link--footer social" href="https://linkedin.com" target="_blank">
             <svg class="social__icon">
             <use href="./images/icons.svg#icon-linkedin2">
             </svg>
-          </a>
+            </a>
           </li>
         </ul>
         </div>
         <div class="footer__email email">
-        <h2 class="email__title">Підпишіться на розсилку</h2>
+        <h2 class="footer__title">Підпишіться на розсилку</h2>
         <form class="email__form">
           <input class="email__input" required type="email" placeholder="E-mail">
           <button class="email__submit subscribe" type="submit">
@@ -340,5 +444,9 @@
         </form>
         </div>
     </footer>
+
+    <script src="./js/mobile-nav.js"></script>
+    <script src="./js/filters.js"></script>
+  
   </body>
 </html>

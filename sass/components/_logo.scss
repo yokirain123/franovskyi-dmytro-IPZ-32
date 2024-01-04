@@ -1,17 +1,26 @@
 .logo {
-    margin-right: 93px;
-    color: var(--accent-color);
+    color: getColor(accent-color);
     font-size: 26px;
     font-family: Raleway, sans-serif;
     letter-spacing: 0.78px;
     font-weight: 700;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @include match(tablet){
+        margin-right: 88px;
+    }
+    @include match(desktop) {
+        margin-right: 93px;
+        font-size: 26px;
+    }
 }
 .footer__logo {
     margin: 0;
 }
 .logo__black {
-    color: var(--black-logo)
+    color: getColor(black-logo)
 }
 .logo__white {
-    color: var(--white-logo)
+    color: getColor(white-logo)
 }

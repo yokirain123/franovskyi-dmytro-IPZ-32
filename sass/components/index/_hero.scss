@@ -1,38 +1,70 @@
 .hero{
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding: 200px 0;
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url("../images/midheader-bg.jpg");
     background-size: cover;
+    background-position: center;
+
+    @include match(retina) {
+        padding: 118px 0;
+        //image path
+    }
+
+    @include match(tablet) {
+        padding: 118px 0;
+        //image path
+        @include match(retina) {
+            //image path
+        }
+    }
+
+    @include match(desktop) {
+        padding: 200px 0;
+        //image path
+        @include match(retina) {
+            //image path
+        }
+    }
     &__content{
         display: flex;
         flex-direction: column;
         gap: 30px; 
     }
     &__title{
-        align-self: center;
-        width: 696px;
-        color: var(--background-primary-color);
+        color: getColor(background-primary-color);
         text-align: center;
+        font-size: 26px;
         font-weight: 900;
-        font-size: 44px;
-        line-height: 1.363;
-        letter-spacing: 2.64px;
+        line-height: 161.54%;
+        letter-spacing: 1.56px;
         text-transform: uppercase;
+        max-width: 360px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        color: getColor(background-primary-color);
+
+        @include match(desktop) {
+            max-width: 696px;
+            font-size: 44px;
+            font-weight: 900;
+            line-height: 136.36%;
+            letter-spacing: 2.64px;
+          }
     }
     &__button{
         @include button;
         padding: 10px 24px;
         align-self: center;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        background-color: var(--accent-color);
-        color: var(--background-primary-color);
+        background-color: getColor(accent-color);
+        color: getColor(background-primary-color);
         font-weight: 700;
         line-height: 1.875;
         letter-spacing: 0.96px;
     }
     &__button:hover,
     &__buton:focus{
-        background-color: var(--button-hover-color);
+        background-color: getColor(button-hover-color);
     }
 }

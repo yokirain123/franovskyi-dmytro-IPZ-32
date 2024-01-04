@@ -5,12 +5,14 @@
 @import "./base/reset";
 @import "./components/logo";
 @import "./components/header";
+@import "./components/mobile-nav";
 @import "./components/index/hero";
 @import "./components/index/features";
 @import "./components/index/development";
 @import "./components/index/team";
+@import "./components/index/social";
 @import "./components/index/clients";
 @import "./components/index/modal";
-@import "./components/portfolio/filter";
+// @import "./components/portfolio/filter";
 @import "./components/portfolio/projects";
 @import "./components/footer";
